@@ -1,0 +1,109 @@
+/* Contact Form Styles */
+.contact-form {
+  background-color: #1a1a1a;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff88;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #0d0d0d;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff88;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999999;
+  font-style: italic;
+}
+
+.contact-form .btn {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #00ffff;
+  color: #0d0d0d;
+  box-shadow: 0 0 10px #00ffffcc;
+}
+
+.toggle-qr {
+  cursor: pointer;
+  color: #00ffff;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.toggle-qr:hover {
+  color: #ffffff;
+}
+
+.qr-image {
+  width: 120px;   /* Smaller size */
+  height: auto;
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffff60;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.whatsapp-section {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 20px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    align-self: stretch;
+  }
+
+  .qr-image {
+    width: 90px; /* smaller on mobile */
+  }
+}
+

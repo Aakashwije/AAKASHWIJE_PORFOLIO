@@ -1,0 +1,168 @@
+/* Base Body Styles */
+body {
+  margin: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #00ffff;
+  font-size: 1rem; /* Base font size scalable */
+}
+
+/* Projects Section Title */
+.projects h2 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  color: #00ffff;
+}
+
+/* Table Container */
+.table-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: clamp(1rem, 2vw, 2rem);
+  border-radius: 10px;
+  overflow-x: auto; /* enable horizontal scroll on small screens */
+  background-color: #1e1e1e;
+  box-shadow: 0 0 15px #00ffff33;
+}
+
+/* Optional Grid Background */
+.table-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30px);
+  grid-template-rows: repeat(auto-fill, 30px);
+  gap: 4px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30px);
+  grid-template-rows: repeat(auto-fill, 30px);
+  gap: 4px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.grid-overlay div {
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.grid-overlay div:hover {
+  background-color: #00ffffcc;
+  cursor: default;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  color: #00ffff;
+  font-size: 1rem;
+}
+
+thead tr {
+  background-color: #00ffff;
+  color: #121212;
+  font-weight: 700;
+}
+
+th, td {
+  padding: clamp(8px, 1vw, 15px);
+  border-bottom: 1px solid #00ffff55;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+tbody tr:hover {
+  background-color: #00ffff33;
+}
+
+/* Navigation Links */
+.nav-links a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+/* Responsive for small phones */
+@media (max-width: 600px) {
+  .projects h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .table-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  table {
+    font-size: 0.9rem;
+    min-width: 600px;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
+
+  .nav-links a {
+    margin-right: 10px;
+  }
+}
+
+/* Responsive for devices like Galaxy S23 Ultra */
+@media (min-width: 601px) and (max-width: 900px) {
+  .table-container {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
+/* Optional: larger screens */
+@media (min-width: 901px) {
+  .projects h2 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+}

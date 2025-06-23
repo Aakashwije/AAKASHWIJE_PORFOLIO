@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience - Aakash Wijesekara</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="Experience.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html"><i class="fa-solid fa-address-card"></i> About</a>
+      <a href="Experience.html" class="active"><i class="fa-solid fa-briefcase"></i> Experience</a>
+      <a href="projects.html"><i class="fa-solid fa-list-check"></i> Projects</a>
+      <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+    </div>
+  </nav>
+
+  <!-- Experience Content -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Experience</h1>
+
+      <!-- Blue & Gold 7s -->
+      <div class="experience-item">
+        <h2>EVENT CHAIR – BLUE AND GOLD HOCKEY 7S</h2>
+        <p class="experience-date"><i class="fa-regular fa-calendar"></i> Oct 2024</p>
+        <p>Led the largest hockey tournament in Sri Lanka, managing logistics, sponsorships, and over 1000 participants.</p>
+       
+        <div class="experience-images">
+          <img src="pics/7s.webp" alt="Bng1">
+          <img src="pics/7ns2.webp" alt="Bng2">
+          <img src="pics/7ns3.webp" alt="Bng3">
+        </div>
+
+        <button class="toggle-video-btn" onclick="toggleVideo('video-bng', this)">Watch Video</button>
+        <div id="video-bng" class="experience-video" style="display: none;">
+          <video controls width="640">
+            <source src="pics/7s_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Senior Prefect -->
+      <div class="experience-item">
+        <h2>SENIOR PREFECT – ROYAL COLLEGE COLOMBO, 07</h2>
+        <p class="experience-date"><i class="fa-regular fa-calendar"></i> 2022 – 2023</p>
+        <p>Organized major school events such as Colours Night and Prize Giving, handled discipline, and represented student leadership.</p>
+
+        <div class="experience-images">
+          <img src="pics/sp/sp3.jpeg" alt="sp1">
+          <img src="pics/sp/sp2.jpeg" alt="sp2">
+          <img src="pics/sp/sp5.jpeg" alt="sp3">
+        </div>
+      </div>
+
+      <!-- Hockey Captain -->
+      <div class="experience-item">
+        <h2>1ST XI HOCKEY CAPTAIN – ROYAL COLLEGE, COLOMBO 07</h2>
+        <p class="experience-date"><i class="fa-regular fa-calendar"></i> 2023</p>
+        <p>Led the team as the 1st XI Hockey Captian 2023 to a historic win after 9 years in the 22nd Hockey Big Match. Responsible for team strategy, training, and motivation. Sharpened leadership, discipline, and team-building skills.</p>
+
+        <div class="experience-images">
+          <img src="pics/cap/cap1.jpeg" alt="cap1">
+          <img src="pics/cap/cap2.jpeg" alt="cap2">
+          <img src="pics/cap/cap3.jpeg" alt="cap3">
+        </div>
+
+        <button class="toggle-video-btn" onclick="toggleVideo('video-cap', this)">Watch Video</button>
+        <div id="video-cap" class="experience-video" style="display: none;">
+          <video controls width="640">
+            <source src="pics/cap/roythovid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="experience-item">
+    <h2>REPRESENTED MAJOR HOCKEY TEAMS</h2>
+    <p class="experience-date"><i class="fa-regular fa-calendar"></i> 2022 – 2025</p>
+    <p>Represented the Sri Lanka Junior National Hockey Team, Colombo Hockey Team, and Mercantile Hockey Team at national and inter-club levels.</p>
+
+    <div class="experience-images">
+        <img src="pics/hky/hky1.jpeg" alt="hky1">
+        <img src="pics/hky/hky2.jpeg" alt="hk2">
+        <img src="pics/hky/hky3.jpeg" alt="hky3">
+    </div>
+    </div>
+
+    <div class="experience-item">
+  <h2>CHAIRMAN – AERONAUTICAL SOCIETY, ROYAL COLLEGE,COLOMBO 07</h2>
+  <p class="experience-date"><i class="fa-regular fa-calendar"></i> 2022</p>
+  <p>Led the society in organizing major aviation initiatives including the highly successful <B>Sky Fiesta.</B> Oversaw event planning, technical coordination, and student engagement in aeronautical innovations.</p>
+
+  <div class="experience-images">
+    <img src="pics/aero/aero1.jpeg" alt="Aero1">
+    <img src="pics/aero/aero2.jpeg" alt="Aero2">
+    <img src="pics/aero/aero3.jpeg" alt="Aero3">
+  </div>
+</div>
+
+
+
+    </div>
+  </section>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleVideo(videoId, btn) {
+      const container = document.getElementById(videoId);
+      if (container.style.display === "none") {
+        container.style.display = "flex";
+        btn.textContent = "Hide Video";
+      } else {
+        container.style.display = "none";
+        btn.textContent = "Watch Video";
+      }
+    }
+  </script>
+
+</body>
+</html>

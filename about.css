@@ -1,0 +1,151 @@
+/* Global styles */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  animation: fadeInBody 2s ease-in;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1 {
+  text-align: center;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00ffff;
+  width: 0;
+  margin: auto;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 260px; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.hero-text p {
+  text-align: center;
+  margin: 10px auto;
+  max-width: 800px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  animation: fadeInText 1.5s ease-in both;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 140px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.image-card {
+  text-align: center;
+  width: 250px;
+}
+
+.image-card img {
+  width: 150%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffff;
+}
+
+.image-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+nav {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* Responsive styles for phone screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .typewriter {
+    width: 180px;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+    font-size: 1rem;
+    margin: 8px 10px;
+  }
+
+  .image-row {
+    gap: 20px;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-card {
+    width: 90vw;
+  }
+
+  .image-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  nav {
+    margin-bottom: 20px;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 8px 0;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Aakash Wijesekara</title>
+
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="projects.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html"><i class="fa-solid fa-address-card"></i> About</a>
+      <a href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a>
+      <a href="projects.html" class="active"><i class="fa-solid fa-list-check"></i> Projects</a>
+      <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+    </div>
+  </nav>
+
+  <section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Technologies</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td>1</td>
+  <td>Personal Portfolio</td>
+  <td>My portfolio website</td>
+  <td>HTML, CSS, JavaScript</td>
+  <td>Completed</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Task Manager App</td>
+  <td>Python Tkinter GUI app</td>
+  <td>Python, Tkinter, JSON</td>
+  <td>Completed</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Student Management System</td>
+  <td>Registration System</td>
+  <td>Python, SQL, Tkinter</td>
+  <td>Completed</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Weather App</td>
+  <td>Displays real-time weather using OpenWeather API</td>
+  <td>HTML, CSS, JavaScript, API</td>
+  <td>Reading</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>To-Do List App</td>
+  <td>A task manager with add, delete, and filter functionality</td>
+  <td>HTML, CSS, JavaScript</td>
+  <td>Reading</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>Blog Website</td>
+  <td>Responsive blog site with admin panel</td>
+  <td>HTML, CSS, JavaScript</td>
+  <td>Reading</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>E-commerce Store</td>
+  <td>Product listing and cart functionality</td>
+  <td>HTML, CSS, JavaScript</td>
+  <td>Reading</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>Banking Application</td>
+  <td>Simulates banking operations</td>
+  <td>Java, File I/O</td>
+  <td>Reading</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>Library Management System</td>
+  <td>Book inventory and lending system</td>
+  <td>Java, Collections</td>
+  <td>Reading</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>Chat Application</td>
+  <td>Local network chat system with GUI</td>
+  <td>Java, Sockets, JavaFX</td>
+  <td>Reading</td>
+</tr>
+
+        </tbody>
+      </table>
+
+      <div class="grid-overlay" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript to fill the grid overlay with tiles dynamically
+    const overlay = document.querySelector('.grid-overlay');
+    const container = document.querySelector('.table-container');
+    
+    function createTiles() {
+      overlay.innerHTML = ''; // Clear existing tiles
+      
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      const tileSize = 30;
+      const gap = 4;
+      
+      const columns = Math.floor(containerWidth / (tileSize + gap));
+      const rows = Math.floor(containerHeight / (tileSize + gap));
+      
+      const totalTiles = columns * rows;
+      for(let i = 0; i < totalTiles; i++) {
+        const tile = document.createElement('div');
+        tile.style.width = tileSize + 'px';
+        tile.style.height = tileSize + 'px';
+        overlay.appendChild(tile);
+      }
+    }
+    
+    createTiles();
+    window.addEventListener('resize', createTiles);
+  </script>
+
+</body>
+</html>
